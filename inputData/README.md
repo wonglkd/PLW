@@ -3,6 +3,9 @@
 	* These are tab-delimited edgelists with one edge on each line, i.e.:
 		source<target>destination
 	* These are undirected and unweighted graphs.
+	* Cleaned (ppi.*.cleaned.txt)
+		This means that all duplicate edges and self-loops were removed from the graph,
+		and the list of edges was sorted alphabetically.
 
 ## Contents ##
 This directory contains 2 files:
