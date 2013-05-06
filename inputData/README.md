@@ -1,15 +1,21 @@
-## Format of files ##
-* Protein-Protein Interaction Networks (ppi.*)
-	* These are tab-delimited edgelists with one edge on each line, i.e.:
-		source<target>destination
-	* These are undirected and unweighted graphs.
-	* Cleaned (ppi.*.cleaned.txt)
-		This means that all duplicate edges and self-loops were removed from the graph,
-		and the list of edges was sorted alphabetically.
+Input Data
+==========
 
-## Contents ##
+Format of files
+---------------
+* Protein-Protein Interaction Networks `ppi.*.txt`
+	* These are tab-delimited edgelists with one edge on each line,
+          i.e.: `source<target>destination`
+	* These are undirected and unweighted graphs.
+	* Cleaned `ppi.*.cleaned.txt`
+            * This means that all duplicate edges and self-loops were removed from the graph,
+              and the list of edges was sorted alphabetically.
+
+Contents
+--------
 This directory contains 2 files:
-1.ppi.dip.cleaned.txt
+
+1. ppi.dip.cleaned.txt
 	* 4,930 proteins; 17,201 interactions
 	* From the Database of Interacting Proteins
 		1.	Xenarios I, Salwinski L, Duan X, Higney P, Kim S, Eisenberg D: DIP,
