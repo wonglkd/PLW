@@ -983,6 +983,12 @@ Click on the table headers to sort by that column</div>
 	            	text: start_column
 	            }
 	        },
+	        xAxis: {
+	        	labels: {
+	        		rotation: -45,
+	        		align: 'right'
+	        	}
+	        },
 	        tooltip: {
 	            formatter: function() {
 	                return '<b>'+ this.x +'</b><br/>'+
@@ -999,6 +1005,9 @@ Click on the table headers to sort by that column</div>
 			},
 	        plotOptions: {
 	        	series: {
+	        		dataLabels: {
+	        			enabled: true
+	        		},
 	        		events: {
 		                legendItemClick: function(event) {
 		                    if (this.visible)
