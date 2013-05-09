@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
 
+	<script type="text/javascript"
+	  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
 
     <title>Probabilistic Local Walks</title>
   </head>
@@ -42,7 +45,7 @@ and was designed to detect protein complexes in protein-protein interaction (PPI
 <p>PLW also uses a topological measure called <strong>common neighbour similarity</strong> to estimate the functional similarity of two proteins in order to weigh the unweighted network.
 Additionally, you are allowed to supply your own similarity graph in the format of an edge list via a command-line option.</p>
 
-<p>The  seed selection and core mining algorithm runs in <strong>O(<em>V</em> log <em>V</em> + <em>E</em>)</strong> time, where <em>V</em> is the number of vertices and <em>E</em> is the number of edges.</p>
+<p>The  seed selection and core mining algorithm runs in \(\mathcal{O}(V \log V + E)\) time, where \(V\) is the number of vertices and \(E\) is the number of edges.</p>
 
 <h3>Supplementary Materials</h3>
 
