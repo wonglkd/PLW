@@ -9,6 +9,7 @@
 			<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <!-- 	<script src="js/flexigrid.js"></script> -->
+	<script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
     <title>Probabilistic Local Walks: Results</title>
     <style type="text/css">
     	.datacontainer {
@@ -35,9 +36,22 @@
 		</div>
 	</div>
   <div id="chart_container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+  <div class='span12 text-center'>
+  <p class='alert'>
+	<em>Download F-Measure & Accuracy Graphs as PDFs:</em>
+	<a href="http://fi-de.net/research/PLW/results/dip_cyc2008_20130429-1707.pdf">DIP / CYC2008</a> |
+	<a href="http://fi-de.net/research/PLW/results/combined6_cyc2008_20130502-0728.pdf">COMBINED6 / CYC2008</a> |
+	<a href="http://fi-de.net/research/PLW/results/dip_newmips_20130501-2131.pdf">DIP / NEWMIPS</a> |
+	<a href="http://fi-de.net/research/PLW/results/combined6_newmips_20130502-0728.pdf">COMBINED6 / NEWMIPS</a>
+</p>
+<div class='alert alert-info'>
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+Click on the table headers to sort by that column</div>
+  </div>
+  
   <div id="DIP_CYC2008" class="datacontainer">
   		<h3>DIP + CYC2008</h3>
-		<table id="DIP_CYC2008_data" class="table table-hover table-condensed">
+		<table id="DIP_CYC2008_data" class="tablesorter table table-hover table-condensed">
 		  <thead>
 		    <tr>
 		      <th>Algorithm</th>
@@ -255,7 +269,7 @@
 		
   <div id="DIP_NEWMIPS" class="datacontainer">
   		<h3>DIP + NewMIPS</h3>
-		<table id="DIP_NEWMIPS_data" class="table table-hover table-condensed">
+		<table id="DIP_NEWMIPS_data" class="tablesorter table table-hover table-condensed">
 		  <thead>
 		    <tr>
 		      <th>Algorithm</th>
@@ -473,7 +487,7 @@
 
   <div id="COMBINED6_CYC2008" class="datacontainer">
   		<h3>COMBINED6 + CYC2008</h3>
-		<table id="COMBINED6_CYC2008_data" class="table table-hover table-condensed">
+		<table id="COMBINED6_CYC2008_data" class="tablesorter table table-hover table-condensed">
 		  <thead>
 		    <tr>
 		      <th>Algorithm</th>
@@ -691,7 +705,7 @@
 		
   <div id="COMBINED6_NEWMIPS" class="datacontainer">
   		<h3>COMBINED6 + NewMIPS</h3>
-		<table id="COMBINED6_NEWMIPS_data" class="table table-hover table-condensed">
+		<table id="COMBINED6_NEWMIPS_data" class="tablesorter table table-hover table-condensed">
 		  <thead>
 		    <tr>
 		      <th>Algorithm</th>
@@ -936,6 +950,7 @@
 	$(document).ready(function(){
     	$('#'+current_dataset).show();
 		drawchart(current_dataset);
+		$('.tablesorter').tablesorter();
 	});
 
 	function drawchart(dataset_todraw) {
