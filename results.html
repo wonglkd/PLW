@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Probabilistic Local Walks: An Accurate And Efficient Algorithm For Detecting Protein Complexes from Protein-Protein Interaction Networks" />
+<!--     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap_readable.min.css"> -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<!--     <link href="css/flexigrid.pack.css" rel="stylesheet" type="text/css"> -->
+			<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<!-- 	<script src="js/flexigrid.js"></script> -->
+    <title>Probabilistic Local Walks: Results</title>
+    <style type="text/css">
+    	.datacontainer {
+    		display: none;
+    	}
+    </style>
+  </head>
+  <body>
+  	<div class='container'>
+  	<div class="row">
+  		<div class="span12 text-center well well-small" id="select_dataset">
+  			<a href='index.html' class='btn'>Back</a>
+		  	PPI Dataset:
+			<div id="select_PPI" class="btn-group" data-toggle="buttons-radio">
+				<button type="button" class="btn btn-primary active">DIP</button>
+				<button type="button" class="btn btn-primary">COMBINED6</button>
+			</div>
+	
+		  	Benchmark Complex Set:
+			<div id="select_complex" class="btn-group" data-toggle="buttons-radio">
+				<button type="button" class="btn btn-primary active">CYC2008</button>
+				<button type="button" class="btn btn-primary">NewMIPS</button>
+			</div>
+		</div>
+	</div>
+  <div id="chart_container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+  <div id="DIP_CYC2008" class="datacontainer">
+  		<h3>DIP + CYC2008</h3>
+		<table id="DIP_CYC2008_data" class="table table-hover table-condensed">
+		  <thead>
+		    <tr>
+		      <th>Algorithm</th>
+		      <th>No. of Clusters</th>
+		      <th>Average Size</th>
+		      <th>Covered Proteins</th>
+		      <th>Sensitivity (Sn)</th>
+		      <th>PPV</th>
+		      <th>Accuracy</th>
+		      <th>N_cb</th>
+		      <th>Recall</th>
+		      <th>N_cp</th>
+		      <th>Precision</th>
+		      <th>F-measure</th>
+		      <th>Average Co-localisation Score</th>
+		      <th>Average Co-localisation PPV</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>MCODE</td>
+		      <td>58</td>
+		      <td>13.000</td>
+		      <td>482</td>
+		      <td>0.306</td>
+		      <td>0.421</td>
+		      <td>0.359</td>
+		      <td>35</td>
+		      <td>0.148</td>
+		      <td>31</td>
+		      <td>0.534</td>
+		      <td>0.232</td>
+		      <td>0.761</td>
+		      <td>0.641</td>
+		    </tr>
+		    <tr>
+		      <td>RNSC</td>
+		      <td>541</td>
+		      <td>3.872</td>
+		      <td>667</td>
+		      <td>0.423</td>
+		      <td>0.895</td>
+		      <td>0.615</td>
+		      <td>119</td>
+		      <td>0.504</td>
+		      <td>107</td>
+		      <td>0.198</td>
+		      <td>0.284</td>
+		      <td>0.722</td>
+		      <td>0.593</td>
+		    </tr>
+		    <tr>
+		      <td>MCL</td>
+		      <td>600</td>
+		      <td>6.835</td>
+		      <td>801</td>
+		      <td>0.508</td>
+		      <td>0.808</td>
+		      <td>0.641</td>
+		      <td>126</td>
+		      <td>0.534</td>
+		      <td>119</td>
+		      <td>0.198</td>
+		      <td>0.289</td>
+		      <td>0.652</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>DPClus</td>
+		      <td>301</td>
+		      <td>26.668</td>
+		      <td>663</td>
+		      <td>0.421</td>
+		      <td>0.266</td>
+		      <td>0.335</td>
+		      <td>25</td>
+		      <td>0.106</td>
+		      <td>27</td>
+		      <td>0.090</td>
+		      <td>0.097</td>
+		      <td>0.520</td>
+		      <td>0.390</td>
+		    </tr>
+		    <tr>
+		      <td>CFinder</td>
+		      <td>245</td>
+		      <td>10.212</td>
+		      <td>1032</td>
+		      <td>0.655</td>
+		      <td>0.405</td>
+		      <td>0.515</td>
+		      <td>75</td>
+		      <td>0.318</td>
+		      <td>72</td>
+		      <td>0.294</td>
+		      <td>0.305</td>
+		      <td>0.702</td>
+		      <td>0.561</td>
+		    </tr>
+		    <tr>
+		      <td>CMC</td>
+		      <td>423</td>
+		      <td>7.388</td>
+		      <td>945</td>
+		      <td>0.600</td>
+		      <td>0.699</td>
+		      <td>0.647</td>
+		      <td>144</td>
+		      <td>0.610</td>
+		      <td>131</td>
+		      <td>0.310</td>
+		      <td>0.411</td>
+		      <td>0.671</td>
+		      <td>0.529</td>
+		    </tr>
+		    <tr>
+		      <td>RRW</td>
+		      <td>248</td>
+		      <td>5.694</td>
+		      <td>613</td>
+		      <td>0.389</td>
+		      <td>0.832</td>
+		      <td>0.569</td>
+		      <td>120</td>
+		      <td>0.508</td>
+		      <td>102</td>
+		      <td>0.411</td>
+		      <td>0.455</td>
+		      <td>0.721</td>
+		      <td>0.575</td>
+		    </tr>
+		    <tr>
+		      <td>COACH</td>
+		      <td>746</td>
+		      <td>8.036</td>
+		      <td>865</td>
+		      <td>0.549</td>
+		      <td>0.761</td>
+		      <td>0.646</td>
+		      <td>156</td>
+		      <td>0.661</td>
+		      <td>257</td>
+		      <td>0.345</td>
+		      <td>0.453</td>
+		      <td>0.715</td>
+		      <td>0.565</td>
+		    </tr>
+		    <tr>
+		      <td>SPICi</td>
+		      <td>412</td>
+		      <td>5.129</td>
+		      <td>700</td>
+		      <td>0.444</td>
+		      <td>0.820</td>
+		      <td>0.604</td>
+		      <td>118</td>
+		      <td>0.500</td>
+		      <td>102</td>
+		      <td>0.248</td>
+		      <td>0.331</td>
+		      <td>0.660</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>SR-MCL</td>
+		      <td>3879</td>
+		      <td>13.621</td>
+		      <td>1202</td>
+		      <td>0.763</td>
+		      <td>0.501</td>
+		      <td>0.618</td>
+		      <td>177</td>
+		      <td>0.750</td>
+		      <td>619</td>
+		      <td>0.160</td>
+		      <td>0.263</td>
+		      <td>0.582</td>
+		      <td>0.460</td>
+		    </tr>
+		    <tr>
+		      <td>ClusterONE</td>
+		      <td>342</td>
+		      <td>4.842</td>
+		      <td>596</td>
+		      <td>0.378</td>
+		      <td>0.892</td>
+		      <td>0.581</td>
+		      <td>103</td>
+		      <td>0.436</td>
+		      <td>115</td>
+		      <td>0.336</td>
+		      <td>0.380</td>
+		      <td>0.735</td>
+		      <td>0.595</td>
+		    </tr>
+		    <tr>
+		      <td>PLW</td>
+		      <td>576</td>
+		      <td>6.035</td>
+		      <td>782</td>
+		      <td>0.496</td>
+		      <td>0.850</td>
+		      <td>0.649</td>
+		      <td>149</td>
+		      <td>0.631</td>
+		      <td>264</td>
+		      <td>0.458</td>
+		      <td>0.531</td>
+		      <td>0.733</td>
+		      <td>0.588</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+		
+  <div id="DIP_NEWMIPS" class="datacontainer">
+  		<h3>DIP + NewMIPS</h3>
+		<table id="DIP_NEWMIPS_data" class="table table-hover table-condensed">
+		  <thead>
+		    <tr>
+		      <th>Algorithm</th>
+		      <th>No. of Clusters</th>
+		      <th>Average Size</th>
+		      <th>Covered Proteins</th>
+		      <th>Sensitivity (Sn)</th>
+		      <th>PPV</th>
+		      <th>Accuracy</th>
+		      <th>N_cb</th>
+		      <th>Recall</th>
+		      <th>N_cp</th>
+		      <th>Precision</th>
+		      <th>F-measure</th>
+		      <th>Average Co-localisation Score</th>
+		      <th>Average Co-localisation PPV</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>MCODE</td>
+		      <td>58</td>
+		      <td>13.000</td>
+		      <td>928</td>
+		      <td>0.205</td>
+		      <td>0.473</td>
+		      <td>0.311</td>
+		      <td>47</td>
+		      <td>0.143</td>
+		      <td>28</td>
+		      <td>0.483</td>
+		      <td>0.221</td>
+		      <td>0.761</td>
+		      <td>0.641</td>
+		    </tr>
+		    <tr>
+		      <td>RNSC</td>
+		      <td>541</td>
+		      <td>3.872</td>
+		      <td>1159</td>
+		      <td>0.256</td>
+		      <td>0.878</td>
+		      <td>0.474</td>
+		      <td>153</td>
+		      <td>0.466</td>
+		      <td>92</td>
+		      <td>0.170</td>
+		      <td>0.249</td>
+		      <td>0.722</td>
+		      <td>0.593</td>
+		    </tr>
+		    <tr>
+		      <td>MCL</td>
+		      <td>600</td>
+		      <td>6.835</td>
+		      <td>1432</td>
+		      <td>0.316</td>
+		      <td>0.772</td>
+		      <td>0.494</td>
+		      <td>163</td>
+		      <td>0.497</td>
+		      <td>110</td>
+		      <td>0.183</td>
+		      <td>0.268</td>
+		      <td>0.652</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>DPClus</td>
+		      <td>301</td>
+		      <td>26.668</td>
+		      <td>1312</td>
+		      <td>0.289</td>
+		      <td>0.358</td>
+		      <td>0.322</td>
+		      <td>33</td>
+		      <td>0.101</td>
+		      <td>29</td>
+		      <td>0.096</td>
+		      <td>0.098</td>
+		      <td>0.520</td>
+		      <td>0.390</td>
+		    </tr>
+		    <tr>
+		      <td>CFinder</td>
+		      <td>245</td>
+		      <td>10.212</td>
+		      <td>2523</td>
+		      <td>0.557</td>
+		      <td>0.476</td>
+		      <td>0.515</td>
+		      <td>92</td>
+		      <td>0.280</td>
+		      <td>72</td>
+		      <td>0.294</td>
+		      <td>0.287</td>
+		      <td>0.702</td>
+		      <td>0.561</td>
+		    </tr>
+		    <tr>
+		      <td>CMC</td>
+		      <td>423</td>
+		      <td>7.388</td>
+		      <td>1764</td>
+		      <td>0.389</td>
+		      <td>0.720</td>
+		      <td>0.529</td>
+		      <td>200</td>
+		      <td>0.610</td>
+		      <td>131</td>
+		      <td>0.310</td>
+		      <td>0.411</td>
+		      <td>0.671</td>
+		      <td>0.529</td>
+		    </tr>
+		    <tr>
+		      <td>RRW</td>
+		      <td>248</td>
+		      <td>5.694</td>
+		      <td>1018</td>
+		      <td>0.225</td>
+		      <td>0.818</td>
+		      <td>0.429</td>
+		      <td>153</td>
+		      <td>0.466</td>
+		      <td>94</td>
+		      <td>0.379</td>
+		      <td>0.418</td>
+		      <td>0.721</td>
+		      <td>0.575</td>
+		    </tr>
+		    <tr>
+		      <td>COACH</td>
+		      <td>746</td>
+		      <td>8.036</td>
+		      <td>1545</td>
+		      <td>0.341</td>
+		      <td>0.772</td>
+		      <td>0.513</td>
+		      <td>212</td>
+		      <td>0.646</td>
+		      <td>258</td>
+		      <td>0.346</td>
+		      <td>0.451</td>
+		      <td>0.715</td>
+		      <td>0.565</td>
+		    </tr>
+		    <tr>
+		      <td>SPICi</td>
+		      <td>412</td>
+		      <td>5.129</td>
+		      <td>1268</td>
+		      <td>0.280</td>
+		      <td>0.809</td>
+		      <td>0.476</td>
+		      <td>161</td>
+		      <td>0.491</td>
+		      <td>94</td>
+		      <td>0.228</td>
+		      <td>0.312</td>
+		      <td>0.660</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>SR-MCL</td>
+		      <td>3879</td>
+		      <td>13.621</td>
+		      <td>2585</td>
+		      <td>0.570</td>
+		      <td>0.568</td>
+		      <td>0.569</td>
+		      <td>242</td>
+		      <td>0.738</td>
+		      <td>610</td>
+		      <td>0.157</td>
+		      <td>0.259</td>
+		      <td>0.582</td>
+		      <td>0.460</td>
+		    </tr>
+		    <tr>
+		      <td>ClusterONE</td>
+		      <td>342</td>
+		      <td>4.842</td>
+		      <td>1013</td>
+		      <td>0.223</td>
+		      <td>0.894</td>
+		      <td>0.447</td>
+		      <td>135</td>
+		      <td>0.412</td>
+		      <td>104</td>
+		      <td>0.304</td>
+		      <td>0.350</td>
+		      <td>0.735</td>
+		      <td>0.595</td>
+		    </tr>
+		    <tr>
+		      <td>PLW</td>
+		      <td>576</td>
+		      <td>6.035</td>
+		      <td>1383</td>
+		      <td>0.305</td>
+		      <td>0.866</td>
+		      <td>0.514</td>
+		      <td>198</td>
+		      <td>0.604</td>
+		      <td>258</td>
+		      <td>0.448</td>
+		      <td>0.514</td>
+		      <td>0.733</td>
+		      <td>0.588</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+  <div id="COMBINED6_CYC2008" class="datacontainer">
+  		<h3>COMBINED6 + CYC2008</h3>
+		<table id="COMBINED6_CYC2008_data" class="table table-hover table-condensed">
+		  <thead>
+		    <tr>
+		      <th>Algorithm</th>
+		      <th>No. of Clusters</th>
+		      <th>Average Size</th>
+		      <th>Covered Proteins</th>
+		      <th>Sensitivity (Sn)</th>
+		      <th>PPV</th>
+		      <th>Accuracy</th>
+		      <th>N_cb</th>
+		      <th>Recall</th>
+		      <th>N_cp</th>
+		      <th>Precision</th>
+		      <th>F-measure</th>
+		      <th>Average Co-localisation Score</th>
+		      <th>Average Co-localisation PPV</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>MCODE</td>
+		      <td>63</td>
+		      <td>15.556</td>
+		      <td>676</td>
+		      <td>0.429</td>
+		      <td>0.413</td>
+		      <td>0.421</td>
+		      <td>43</td>
+		      <td>0.182</td>
+		      <td>35</td>
+		      <td>0.556</td>
+		      <td>0.274</td>
+		      <td>0.761</td>
+		      <td>0.651</td>
+		    </tr>
+		    <tr>
+		      <td>RNSC</td>
+		      <td>426</td>
+		      <td>4.455</td>
+		      <td>877</td>
+		      <td>0.556</td>
+		      <td>0.910</td>
+		      <td>0.711</td>
+		      <td>137</td>
+		      <td>0.581</td>
+		      <td>118</td>
+		      <td>0.277</td>
+		      <td>0.375</td>
+		      <td>0.740</td>
+		      <td>0.601</td>
+		    </tr>
+		    <tr>
+		      <td>MCL</td>
+		      <td>489</td>
+		      <td>6.644</td>
+		      <td>1016</td>
+		      <td>0.645</td>
+		      <td>0.802</td>
+		      <td>0.719</td>
+		      <td>122</td>
+		      <td>0.517</td>
+		      <td>101</td>
+		      <td>0.207</td>
+		      <td>0.295</td>
+		      <td>0.619</td>
+		      <td>0.487</td>
+		    </tr>
+		    <tr>
+		      <td>DPClus</td>
+		      <td>261</td>
+		      <td>38.080</td>
+		      <td>791</td>
+		      <td>0.502</td>
+		      <td>0.259</td>
+		      <td>0.361</td>
+		      <td>27</td>
+		      <td>0.114</td>
+		      <td>28</td>
+		      <td>0.107</td>
+		      <td>0.111</td>
+		      <td>0.511</td>
+		      <td>0.392</td>
+		    </tr>
+		    <tr>
+		      <td>CFinder</td>
+		      <td>190</td>
+		      <td>12.142</td>
+		      <td>1173</td>
+		      <td>0.744</td>
+		      <td>0.335</td>
+		      <td>0.499</td>
+		      <td>62</td>
+		      <td>0.263</td>
+		      <td>58</td>
+		      <td>0.305</td>
+		      <td>0.282</td>
+		      <td>0.708</td>
+		      <td>0.566</td>
+		    </tr>
+		    <tr>
+		      <td>CMC</td>
+		      <td>379</td>
+		      <td>8.942</td>
+		      <td>1060</td>
+		      <td>0.673</td>
+		      <td>0.625</td>
+		      <td>0.648</td>
+		      <td>133</td>
+		      <td>0.564</td>
+		      <td>116</td>
+		      <td>0.306</td>
+		      <td>0.397</td>
+		      <td>0.665</td>
+		      <td>0.526</td>
+		    </tr>
+		    <tr>
+		      <td>RRW</td>
+		      <td>241</td>
+		      <td>5.884</td>
+		      <td>688</td>
+		      <td>0.437</td>
+		      <td>0.878</td>
+		      <td>0.619</td>
+		      <td>124</td>
+		      <td>0.525</td>
+		      <td>112</td>
+		      <td>0.465</td>
+		      <td>0.493</td>
+		      <td>0.717</td>
+		      <td>0.568</td>
+		    </tr>
+		    <tr>
+		      <td>COACH</td>
+		      <td>696</td>
+		      <td>9.420</td>
+		      <td>1010</td>
+		      <td>0.641</td>
+		      <td>0.765</td>
+		      <td>0.700</td>
+		      <td>154</td>
+		      <td>0.653</td>
+		      <td>275</td>
+		      <td>0.395</td>
+		      <td>0.492</td>
+		      <td>0.709</td>
+		      <td>0.563</td>
+		    </tr>
+		    <tr>
+		      <td>SPICi</td>
+		      <td>335</td>
+		      <td>5.710</td>
+		      <td>871</td>
+		      <td>0.553</td>
+		      <td>0.854</td>
+		      <td>0.687</td>
+		      <td>127</td>
+		      <td>0.538</td>
+		      <td>107</td>
+		      <td>0.319</td>
+		      <td>0.401</td>
+		      <td>0.667</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>SR-MCL</td>
+		      <td>2608</td>
+		      <td>12.138</td>
+		      <td>1253</td>
+		      <td>0.795</td>
+		      <td>0.539</td>
+		      <td>0.655</td>
+		      <td>170</td>
+		      <td>0.720</td>
+		      <td>468</td>
+		      <td>0.179</td>
+		      <td>0.287</td>
+		      <td>0.576</td>
+		      <td>0.447</td>
+		    </tr>
+		    <tr>
+		      <td>ClusterONE</td>
+		      <td>812</td>
+		      <td>5.026</td>
+		      <td>937</td>
+		      <td>0.595</td>
+		      <td>0.846</td>
+		      <td>0.709</td>
+		      <td>140</td>
+		      <td>0.593</td>
+		      <td>149</td>
+		      <td>0.183</td>
+		      <td>0.280</td>
+		      <td>0.624</td>
+		      <td>0.491</td>
+		    </tr>
+		    <tr>
+		      <td>PLW</td>
+		      <td>351</td>
+		      <td>8.721</td>
+		      <td>832</td>
+		      <td>0.528</td>
+		      <td>0.917</td>
+		      <td>0.696</td>
+		      <td>109</td>
+		      <td>0.462</td>
+		      <td>257</td>
+		      <td>0.732</td>
+		      <td>0.566</td>
+		      <td>0.804</td>
+		      <td>0.665</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+		
+  <div id="COMBINED6_NEWMIPS" class="datacontainer">
+  		<h3>COMBINED6 + NewMIPS</h3>
+		<table id="COMBINED6_NEWMIPS_data" class="table table-hover table-condensed">
+		  <thead>
+		    <tr>
+		      <th>Algorithm</th>
+		      <th>No. of Clusters</th>
+		      <th>Average Size</th>
+		      <th>Covered Proteins</th>
+		      <th>Sensitivity (Sn)</th>
+		      <th>PPV</th>
+		      <th>Accuracy</th>
+		      <th>N_cb</th>
+		      <th>Recall</th>
+		      <th>N_cp</th>
+		      <th>Precision</th>
+		      <th>F-measure</th>
+		      <th>Average Co-localisation Score</th>
+		      <th>Average Co-localisation PPV</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>MCODE</td>
+		      <td>63</td>
+		      <td>15.556</td>
+		      <td>1341</td>
+		      <td>0.296</td>
+		      <td>0.518</td>
+		      <td>0.391</td>
+		      <td>58</td>
+		      <td>0.177</td>
+		      <td>32</td>
+		      <td>0.508</td>
+		      <td>0.262</td>
+		      <td>0.761</td>
+		      <td>0.651</td>
+		    </tr>
+		    <tr>
+		      <td>RNSC</td>
+		      <td>426</td>
+		      <td>4.455</td>
+		      <td>1587</td>
+		      <td>0.350</td>
+		      <td>0.912</td>
+		      <td>0.565</td>
+		      <td>181</td>
+		      <td>0.552</td>
+		      <td>104</td>
+		      <td>0.244</td>
+		      <td>0.339</td>
+		      <td>0.740</td>
+		      <td>0.601</td>
+		    </tr>
+		    <tr>
+		      <td>MCL</td>
+		      <td>489</td>
+		      <td>6.644</td>
+		      <td>1890</td>
+		      <td>0.417</td>
+		      <td>0.826</td>
+		      <td>0.587</td>
+		      <td>158</td>
+		      <td>0.482</td>
+		      <td>97</td>
+		      <td>0.198</td>
+		      <td>0.281</td>
+		      <td>0.619</td>
+		      <td>0.487</td>
+		    </tr>
+		    <tr>
+		      <td>DPClus</td>
+		      <td>261</td>
+		      <td>38.080</td>
+		      <td>1697</td>
+		      <td>0.374</td>
+		      <td>0.458</td>
+		      <td>0.414</td>
+		      <td>41</td>
+		      <td>0.125</td>
+		      <td>32</td>
+		      <td>0.123</td>
+		      <td>0.124</td>
+		      <td>0.511</td>
+		      <td>0.392</td>
+		    </tr>
+		    <tr>
+		      <td>CFinder</td>
+		      <td>190</td>
+		      <td>12.142</td>
+		      <td>3084</td>
+		      <td>0.680</td>
+		      <td>0.531</td>
+		      <td>0.601</td>
+		      <td>74</td>
+		      <td>0.226</td>
+		      <td>53</td>
+		      <td>0.279</td>
+		      <td>0.249</td>
+		      <td>0.708</td>
+		      <td>0.566</td>
+		    </tr>
+		    <tr>
+		      <td>CMC</td>
+		      <td>379</td>
+		      <td>8.942</td>
+		      <td>2056</td>
+		      <td>0.454</td>
+		      <td>0.712</td>
+		      <td>0.568</td>
+		      <td>178</td>
+		      <td>0.543</td>
+		      <td>110</td>
+		      <td>0.290</td>
+		      <td>0.378</td>
+		      <td>0.665</td>
+		      <td>0.526</td>
+		    </tr>
+		    <tr>
+		      <td>RRW</td>
+		      <td>241</td>
+		      <td>5.884</td>
+		      <td>1185</td>
+		      <td>0.261</td>
+		      <td>0.868</td>
+		      <td>0.476</td>
+		      <td>165</td>
+		      <td>0.503</td>
+		      <td>100</td>
+		      <td>0.415</td>
+		      <td>0.455</td>
+		      <td>0.717</td>
+		      <td>0.568</td>
+		    </tr>
+		    <tr>
+		      <td>COACH</td>
+		      <td>696</td>
+		      <td>9.420</td>
+		      <td>1848</td>
+		      <td>0.408</td>
+		      <td>0.845</td>
+		      <td>0.587</td>
+		      <td>211</td>
+		      <td>0.643</td>
+		      <td>283</td>
+		      <td>0.407</td>
+		      <td>0.498</td>
+		      <td>0.709</td>
+		      <td>0.563</td>
+		    </tr>
+		    <tr>
+		      <td>SPICi</td>
+		      <td>335</td>
+		      <td>5.710</td>
+		      <td>1609</td>
+		      <td>0.355</td>
+		      <td>0.860</td>
+		      <td>0.552</td>
+		      <td>174</td>
+		      <td>0.530</td>
+		      <td>96</td>
+		      <td>0.287</td>
+		      <td>0.372</td>
+		      <td>0.667</td>
+		      <td>0.533</td>
+		    </tr>
+		    <tr>
+		      <td>SR-MCL</td>
+		      <td>2608</td>
+		      <td>12.138</td>
+		      <td>2708</td>
+		      <td>0.597</td>
+		      <td>0.617</td>
+		      <td>0.607</td>
+		      <td>213</td>
+		      <td>0.649</td>
+		      <td>462</td>
+		      <td>0.177</td>
+		      <td>0.278</td>
+		      <td>0.576</td>
+		      <td>0.447</td>
+		    </tr>
+		    <tr>
+		      <td>ClusterONE</td>
+		      <td>812</td>
+		      <td>5.026</td>
+		      <td>1686</td>
+		      <td>0.372</td>
+		      <td>0.857</td>
+		      <td>0.565</td>
+		      <td>170</td>
+		      <td>0.518</td>
+		      <td>124</td>
+		      <td>0.153</td>
+		      <td>0.236</td>
+		      <td>0.624</td>
+		      <td>0.491</td>
+		    </tr>
+		    <tr>
+		      <td>PLW</td>
+		      <td>351</td>
+		      <td>8.721</td>
+		      <td>1542</td>
+		      <td>0.340</td>
+		      <td>0.918</td>
+		      <td>0.559</td>
+		      <td>158</td>
+		      <td>0.482</td>
+		      <td>243</td>
+		      <td>0.692</td>
+		      <td>0.568</td>
+		      <td>0.804</td>
+		      <td>0.665</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	</div>
+	<script src="js/highcharts/highcharts.js"></script>
+	<script src="js/highcharts/modules/data.js"></script>
+	<script src="js/highcharts/modules/exporting.js"></script>
+    <script type="text/javascript">
+    var current_dataset = "DIP_CYC2008";
+    var start_column = "F-measure";
+    var hchart;
+    function toggleDataset(dataset) {
+    	$('#'+current_dataset).hide();
+		hchart.destroy();
+    	drawchart(dataset);
+    	$('#'+dataset).show();
+    	current_dataset = dataset;
+    }
+
+	$("#select_dataset button").click(function() {
+		ppi_dataset = $('#select_PPI > .active').html();
+		complex_dataset = $('#select_complex > .active').html();
+		if($(this).parent().attr("id") == "select_PPI")
+			ppi_dataset = $(this).html();
+		else
+			complex_dataset = $(this).html();
+		complex_dataset = complex_dataset.toUpperCase();
+		toggleDataset(ppi_dataset+"_"+complex_dataset);
+	});
+
+	$(document).ready(function(){
+    	$('#'+current_dataset).show();
+		drawchart(current_dataset);
+	});
+
+	function drawchart(dataset_todraw) {
+		hchart = new Highcharts.Chart({
+	        data: {
+	            table: document.getElementById(dataset_todraw+'_data')
+	        },
+	        chart: {
+	        	renderTo: 'chart_container',
+	            type: 'column',
+	            events: {
+	            	load: function(event) {
+	                    var series = this.series;
+	                    for (var i = 0; i < series.length; i++)
+	                    {
+	                        if (series[i].name != start_column)
+	                        {
+	                        	series[i].hide();
+	                        }
+	                    }
+	            	}
+	            }
+	        },
+	        title: {
+	            text: 'Comparative Performance Evaluation'
+	        },
+	        yAxis: {
+	            allowDecimals: true,
+	            title: {
+	            	text: start_column
+	            }
+	        },
+	        tooltip: {
+	            formatter: function() {
+	                return '<b>'+ this.x +'</b><br/>'+
+	                    this.series.name +': '+ this.y;
+	            }
+	        },
+	        legend: {
+	        	align: "right",
+				layout: "vertical",
+				verticalAlign: "middle"
+	        },
+			credits: {
+			  enabled: false
+			},
+	        plotOptions: {
+	        	series: {
+	        		events: {
+		                legendItemClick: function(event) {
+		                    if (this.visible)
+		                        return false;
+	
+		                    var seriesIndex = this.index;
+		                    var series = this.chart.series;
+		                    series[seriesIndex].show();
+		                    this.chart.yAxis[0].setTitle({
+		                    	text: series[seriesIndex].name
+		                    });
+		                    
+		                    for (var i = 0; i < series.length; i++)
+		                    {
+		                        if (series[i].index != seriesIndex && series[i].visible)
+		                        {
+		                        	series[i].hide();
+		                        } 
+		                    }
+		                    return false;
+		                }
+	        		}
+	        	}
+	        }
+	    });
+	}
+    </script>
+  </body>
+</html>

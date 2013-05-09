@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Probabilistic Local Walks: An Accurate And Efficient Method For Detecting Protein Complexes from Protein-Protein Interaction Networks" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
+
 
     <title>Probabilistic Local Walks</title>
   </head>
@@ -16,7 +17,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wonglkd/PLW">View on GitHub</a>
+<!--           <a id="forkme_banner" href="https://github.com/wonglkd/PLW">View on GitHub</a> -->
 
           <h1 id="project_title">Probabilistic Local Walks</h1>
           <h2 id="project_tagline">An Accurate And Efficient Method For Detecting Protein Complexes from Protein-Protein Interaction Networks</h2>
@@ -33,7 +34,7 @@
       <section id="main_content" class="inner">
         <h3>What is PLW?</h3>
 
-<p>PLW (<u>P</u>robabilistic <u>L</u>ocal <u>W</u>alks) is a graph clustering algorithm,
+<p><strong>PLW</strong> (<u>P</u>robabilistic <u>L</u>ocal <u>W</u>alks) is a graph clustering algorithm,
 and was designed to detect protein complexes in protein-protein interaction (PPI) networks with high accuracy and efficiency.</p>
 
 <p>PLW uses a <strong>seed selection strategy</strong> to prioritise proteins for expansion into cores, which selects seeds with dense neighbourhoods. </p>
@@ -41,13 +42,13 @@ and was designed to detect protein complexes in protein-protein interaction (PPI
 <p>PLW also uses a topological measure called <strong>common neighbour similarity</strong> to estimate the functional similarity of two proteins in order to weigh the unweighted network.
 Additionally, you are allowed to supply your own similarity graph in the format of an edge list via a command-line option.</p>
 
-<p>The  seed selection and core mining algorithm runs in <strong>O(|V| log |V| + |E|)</strong> time, where |V| is the number of vertices and |E| is the number of edges.</p>
+<p>The  seed selection and core mining algorithm runs in <strong>O(<em>V</em> log <em>V</em> + <em>E</em>)</strong> time, where <em>V</em> is the number of vertices and <em>E</em> is the number of edges.</p>
 
 <h3>Supplementary Materials</h3>
 
 <ul>
-<li>Full results for performance evaluations
-
+<li><a href='results.html'>Performance Evaluations: full results using dynamically drawn charts</a></li>
+<li>Performance Evaluations: PDFs of F-Measure and Accuracy graphs for download
 <ul>
 <li><a href="http://fi-de.net/research/PLW/results/dip_cyc2008_20130429-1707.pdf">DIP / CYC2008</a></li>
 <li><a href="http://fi-de.net/research/PLW/results/combined6_cyc2008_20130502-0728.pdf">COMBINED6 / CYC2008</a></li>
@@ -55,6 +56,11 @@ Additionally, you are allowed to supply your own similarity graph in the format 
 <li><a href="http://fi-de.net/research/PLW/results/combined6_newmips_20130502-0728.pdf">COMBINED6 / NEWMIPS</a></li>
 </ul>
 </li>
+</ul>
+
+<h3>Binaries and Datasets</h3>
+
+<ul>
 <li><a href="https://github.com/wonglkd/PLW/tree/bin/bin">Binaries</a> and sample data (<a href="https://github.com/wonglkd/PLW/zipball/master">.zip</a> | <a href="https://github.com/wonglkd/PLW/tarball/master">.tar.gz</a>)
 <li><a href="https://github.com/wonglkd/PLW/tree/predictedComplexes/predictedComplexes">Predicted protein complexes</a> (<a href="https://github.com/wonglkd/PLW/zipball/predictedComplexes">.zip</a> | <a href="https://github.com/wonglkd/PLW/tarball/predictedComplexes">.tar.gz</a>)</li>
 </li>
@@ -74,7 +80,10 @@ Additionally, you are allowed to supply your own similarity graph in the format 
 <a href="https://raw.github.com/wonglkd/PLW/benchmarkComplexes/referenceComplexes/cmplx.3.newmips.tab.txt">NewMIPS</a> (Original sources: MIPS, Aloy <em>et al.</em> and SGD Database based on GO annotations)</li>
 </ul>
 </li>
-</ul><h3>References</h3>
+</ul>
+
+
+<h3>References</h3>
 
 <p>Daniel Lin-Kit Wong, Xiao-Li Li, Min Wu, Jie Zheng and See-Kiong Ng<br><strong>PLW: Probabilistic Local Walks for Detecting Protein Complexes from Protein Interaction Networks</strong><br><em>Working Paper</em></p>
 
@@ -89,8 +98,7 @@ Additionally, you are allowed to supply your own similarity graph in the format 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Probabilistic Local Walks maintained by <a href="https://github.com/wonglkd">wonglkd</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p class="copyright"><a href="https://github.com/wonglkd/PLW">Probabilistic Local Walks</a> maintained by <a href="https://github.com/wonglkd">wonglkd</a></p>
       </footer>
     </div>
 
