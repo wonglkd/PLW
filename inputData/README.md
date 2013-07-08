@@ -45,3 +45,13 @@ This directory contains 2 files:
 		6.	Ito T, Chiba T, Ozawa R, Yoshida M, Hattori M, Sakaki Y: A Comprehensive Two-Hybrid
 			Analysis to Explore the Yeast Protein Interactome. Proceedings of the National Academy
 			of Sciences 2001, 98(8):4569–4574.
+3. `ppi.biogrid.cleaned.txt`
+	* 5,640 yeast proteins; 59,748 interactions
+	* Extracted from datasets used by Nepusz et al. (2012)
+		1.	T. Nepusz, H. Yu, and A. Paccanaro
+			Detecting overlapping protein complexes in protein-protein interaction networks
+			Nature Methods, vol. 9, pp. 471-472, 2012.
+	* Original source (BioGRID database):
+		1.	Stark C, Breitkreutz BJ, Reguly T, Boucher L, Breitkreutz1 A, Tyers M
+			BioGRID: a General Repository for Interaction Datasets.
+			Nucleic Acids Research 2006, 34(Database-Issue):535–539.
