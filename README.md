@@ -43,7 +43,9 @@ If you use PLW in your research, we would greatly appreciate it if you cite our 
 
 Daniel Lin-Kit Wong, Xiao-Li Li, Min Wu, Jie Zheng and See-Kiong Ng  
 **PLW: Probabilistic Local Walks for Detecting Protein Complexes from Protein Interaction Networks**  
-Working Paper
+*BMC Genomics* 2013 Volume 14 (Suppl 5), S15.  
+http://www.biomedcentral.com/1471-2164/14/S5/S15  
+Presented in International Conference on Bioinformatics 2013 (InCoB2013).
 
 Contact us
 ----------
