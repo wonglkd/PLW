@@ -9,8 +9,10 @@ Getting started
 3. Run PLW using the following syntax: `./PLW <input.txt> <output_clusters.txt>`  
 
    For example, to run PLW on the supplied DIP dataset, type the next line:  
-   **Linux/Mac**:
+   **Mac**:
    ```./PLW_MacOSX ../inputData/ppi.dip.cleaned.txt clusters.txt```  
+   **Linux**:
+   ```./PLW_Linux ../inputData/ppi.dip.cleaned.txt clusters.txt```  
    **Windows**:
    ```PLW_Win ..\inputData\ppi.dip.cleaned.txt clusters.txt```  
    **Windows (with Cygwin)**:
@@ -30,6 +32,7 @@ Package contents
 ----------------
  * `bin`
     * `PLW_MacOSX`
+    * `PLW_Linux`
     * `PLW_Win.exe`
     * `PLW_Win_cygwin.exe`
     * `README.txt`
